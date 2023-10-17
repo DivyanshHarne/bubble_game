@@ -10,7 +10,7 @@ for(let i =1; i<=90; i++){
 }
 document.querySelector('#pbtm').innerHTML = clutter;
 }
-var timer = 6;
+var timer = 60;
 runTimer = ()=>{
     let timerInterval = setInterval(()=>{
         if(timer>0){
