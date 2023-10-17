@@ -1,4 +1,4 @@
-hitrn = 0;
+let hitrn = 0;
 
 makeBubble=()=>{
     let clutter = "";
@@ -24,8 +24,8 @@ runTimer = ()=>{
     }, 1000)
 }
 newHit=()=>{
-   let randomHit =  Math.floor(Math.random()*10);
-    document.querySelector("#hitval").textContent = randomHit;
+    hitrn =  Math.floor(Math.random()*10);
+    document.querySelector("#hitval").textContent = hitrn;
 }
 var score = 0;
 incrementScore = ()=>{
@@ -33,8 +33,13 @@ incrementScore = ()=>{
     document.querySelector("#scoreval").textContent = score;
 }
 
+
+makeBubble();
+runTimer();
+newHit();
+
 document.querySelector("#pbtm").addEventListener("click",(dets)=>{
- let selectedNumber= Number(dets.target.textContent);
+ let selectedNumber = Number(dets.target.textContent);
 
 if(selectedNumber === hitrn){
     incrementScore();
@@ -43,6 +48,3 @@ if(selectedNumber === hitrn){
 }
 })
 
-makeBubble();
-runTimer();
-newHit();
